@@ -17,7 +17,7 @@ app.use((err, req, res, next) => {
 });
 
 // Data
-let topMovies = [
+let movies = [
   {
     title: 'Pontypool',
     year: '2008',
@@ -149,8 +149,42 @@ app.get('/documentation', (req, res) => {
   res.sendFile('public/documentation.html', { root: __dirname });
 });
 
+// Get all movies
 app.get('/movies', (req, res) => {
-  res.json(topMovies);
+  res.json(movies);
+});
+
+// Get data about a single movie, by title
+app.get('/movies/:title', (req, res) => {
+  res.json(movies.find((movie) => movie.title === req.params.title));
+});
+
+app.get('/movies/genres/:name', (req, res) => {
+  res.send('Here is a description of the ________ movie genre!');
+});
+
+app.get('/directors/:name', (req, res) => {
+  res.send('Here is the data about the director!');
+});
+
+app.post('/users', (req, res) => {
+  res.send('Thank you for subscribing to myFlix!');
+});
+
+app.put('/users/:name/:nameChange', (req, res) => {
+  res.send('Thank you for updating your username!');
+});
+
+app.delete('/users/:name', (req, res) => {
+  res.send('Your account has been deleted!');
+});
+
+app.post('/users/:name/favMovies/:title', (req, res) => {
+  res.send('Your movie has been added to your favourites!');
+});
+
+app.delete('/users/:name/favMovies/:title', (req, res) => {
+  res.send('Your movie has been removed from your favourites!');
 });
 
 // Start the server
