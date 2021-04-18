@@ -1,0 +1,2 @@
+{"_id":{"$oid":"607b859816666434d58bcb4a"},"username":"davidcohenn258","password":"test123","email":"davidcohen2580@gmail.com","Birthday":{"$date":"1985-02-19T00:00:00Z"},"favoriteMovies":[{"$oid":"607b82ef16666434d58bcb41"},{"$oid":"607b82ef16666434d58bcb42"}]}
+{"_id":{"$oid":"607b859e16666434d58bcb4b"},"username":"ntriki","password":"test123","email":"nizartriki@gmail.com","Birthday":{"$date":"1983-02-19T00:00:00Z"},"favoriteMovies":[{"$oid":"607b82ef16666434d58bcb43"},{"$oid":"607b82ef16666434d58bcb44"}]}
